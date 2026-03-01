@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 5rem;
+  gap: 1rem;
+  height: 90px;
+  background-color: white;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #23468C;
+  font-weight: 500;
+  font-size: 14px;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #4a7ba7;
+  }
+}
+
+.separator {
+  color: #23468C;
+  font-weight: 300;
+  margin: 0 0.25rem;
+}
+
+.logo {
+  width: 133px;
+  height: 120px;
+  object-fit: contain;
+}
