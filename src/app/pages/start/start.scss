@@ -1,48 +1,47 @@
-.start-page{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    padding: 2rem;
-    gap: 1rem;
-    background-image: url('/images/photo.avif');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    color: white;
+.start-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 2rem;
+  gap: 1rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  color: white;
 
-    h1{
-        font-size: clamp(1.5rem, 6vw, 4.5rem);
-        line-height: 1.05;
-        text-align: center;
-        margin: 0;
-        margin-top: -15rem;
-        margin-bottom: 10px;
-    }
+  h1 {
+    font-size: clamp(1.5rem, 6vw, 4.5rem);
+    line-height: 1.05;
+    text-align: center;
+    margin: 0;
+    margin-top: -15rem;
+    margin-bottom: 10px;
+  }
 
-    p{
-        margin: 0;
-        font-size: clamp(1.2rem, 2vw, 1.25rem);
-        text-align: center;
-        max-width: 100ch;
-    }
+  p {
+    margin: 0;
+    font-size: clamp(1.2rem, 2vw, 1.25rem);
+    text-align: center;
+    max-width: 100ch;
+  }
 }
 
-.start-page::before{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.18), rgba(0,0,0,0.62));
-    pointer-events: none;
-    z-index: 1;
+.start-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.62));
+  pointer-events: none;
+  z-index: 1;
 }
 
-.start-page > *{
-    position: relative;
-    z-index: 2;
+.start-page>* {
+  position: relative;
+  z-index: 2;
 }
 
 section {
@@ -75,7 +74,7 @@ section {
 
 ::ng-deep .start-page {
   a[matButton="outlined"] {
-    border-width: 5px; 
+    border-width: 5px;
     border-color: white;
   }
 }
@@ -83,7 +82,7 @@ section {
 @media (max-width: 768px) {
   .start-page {
     padding: 1rem;
-    
+
     h1 {
       margin-top: -5rem;
     }
