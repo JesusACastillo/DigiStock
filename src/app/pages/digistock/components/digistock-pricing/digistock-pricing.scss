@@ -1,0 +1,252 @@
+$primary-orange: #ff7a22;
+$text-dark: #111827;
+$text-gray: #6b7280;
+$border-color: #e5e7eb;
+
+.pricing-section {
+    padding: 100px 6%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centrar verticalmente */
+    min-height: calc(100vh - 104px); /* Toda la altura de pantalla visible (menos el header) */
+    position: relative;
+    z-index: 5;
+    scroll-margin-top: 104px; /* Frenar el scroll para no ser tapado por el header */
+
+    .pricing-container {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pricing-header {
+        text-align: center;
+        margin-bottom: 60px;
+
+        .section-title {
+            color: $text-dark;
+            font-size: clamp(2rem, 3.5vw, 2.5rem);
+            font-weight: 800;
+            margin: 0 0 12px 0;
+            letter-spacing: -0.5px;
+        }
+
+        .section-description {
+            color: $text-gray;
+            font-size: 1.125rem;
+            margin: 0;
+            font-weight: 400;
+        }
+    }
+
+    .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        align-items: flex-start;
+
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+            
+            .pricing-card:last-child {
+                grid-column: 1 / -1;
+                max-width: 50%;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            max-width: 450px;
+            margin: 0 auto;
+            
+            .pricing-card:last-child {
+                grid-column: auto;
+                max-width: 100%;
+                margin: 0;
+            }
+        }
+    }
+
+    .pricing-card {
+        background: #f8fafc;
+        border: 1px solid $border-color;
+        border-radius: 16px;
+        padding: 40px 30px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        transition: all 0.3s ease;
+
+        &.popular {
+            background: #ffffff;
+            border: 2px solid $primary-orange;
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1), 0 0 20px rgba($primary-orange, 0.1);
+            transform: translateY(-10px);
+            padding: 45px 30px; // A bit taller to match the scale in the design
+
+            @media (max-width: 1024px) {
+                transform: translateY(0);
+                padding: 40px 30px;
+            }
+
+            .popular-badge {
+                position: absolute;
+                top: -14px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: $primary-orange;
+                color: #ffffff;
+                font-size: 0.75rem;
+                font-weight: 800;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                padding: 6px 16px;
+                border-radius: 20px;
+                white-space: nowrap;
+            }
+        }
+
+        .card-header {
+            margin-bottom: 24px;
+
+            .plan-name {
+                font-size: 1.25rem;
+                font-weight: 800;
+                color: $text-dark;
+                margin: 0 0 8px 0;
+            }
+
+            .plan-subtitle {
+                font-size: 0.875rem;
+                color: $text-gray;
+                margin: 0;
+            }
+        }
+
+        .plan-price {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: baseline;
+            min-height: 48px;
+
+            .currency {
+                font-size: 1.5rem;
+                font-weight: 800;
+                color: $text-dark;
+                margin-right: 2px;
+            }
+
+            .amount {
+                font-size: 2.5rem;
+                font-weight: 900;
+                color: $text-dark;
+                line-height: 1;
+                letter-spacing: -1px;
+            }
+
+            .period {
+                font-size: 1rem;
+                color: #4b5563;
+                font-weight: 600;
+                margin-left: 4px;
+            }
+
+            .custom-price {
+                font-size: 2rem;
+                font-weight: 800;
+                color: $text-dark;
+                line-height: 1.2;
+                letter-spacing: -0.5px;
+            }
+        }
+
+        .plan-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 40px 0;
+            flex-grow: 1;
+
+            li {
+                display: flex;
+                align-items: flex-start;
+                gap: 12px;
+                margin-bottom: 16px;
+                font-size: 0.9rem;
+                color: #374151;
+                font-weight: 500;
+                line-height: 1.4;
+
+                &.disabled {
+                    color: #9ca3af;
+                }
+
+                mat-icon {
+                    font-size: 20px;
+                    width: 20px;
+                    height: 20px;
+
+                    &.icon-check {
+                        color: $primary-orange;
+                    }
+
+                    &.icon-disabled {
+                        color: #d1d5db;
+                    }
+                }
+            }
+        }
+
+        button {
+            width: 100%;
+            height: 48px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &.btn-outline {
+                background: transparent;
+                border: 1px solid $border-color;
+                color: $text-dark;
+
+                &:hover {
+                    background: #f1f5f9;
+                    border-color: #cbd5e1;
+                }
+            }
+
+            &.btn-primary {
+                background: $primary-orange;
+                border: none;
+                color: #ffffff;
+
+                &:hover {
+                    background: darken($primary-orange, 5%);
+                }
+            }
+        }
+    }
+}
+
+// Responsiveness
+@media (max-width: 768px) {
+    .pricing-section {
+        padding: 60px 4%;
+        min-height: auto;
+
+        .pricing-header {
+            margin-bottom: 40px;
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    }
+}

@@ -48,6 +48,8 @@
 section {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .example-button-row {
@@ -55,7 +57,7 @@ section {
 }
 
 .example-button-row .mat-mdc-button-base {
-  margin: 20px 60px 8px 0px;
+  margin: 20px 15px;
 }
 
 .example-flex-container {

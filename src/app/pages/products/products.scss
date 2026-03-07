@@ -60,7 +60,7 @@
                 width: 100%;
                 height: 250px;
                 background-color: #000;
-                
+
                 img {
                     width: 100%;
                     height: 100%;
@@ -108,6 +108,20 @@
                         justify-content: center;
                         cursor: pointer;
                         transition: background-color 0.2s;
+                        padding: 0;
+                        overflow: hidden;
+
+                        mat-icon {
+                            font-family: 'Material Icons' !important;
+                            color: white;
+                            font-size: 20px;
+                            width: 20px;
+                            height: 20px;
+                            line-height: 20px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
 
                         &:hover {
                             background-color: #2563eb;
@@ -120,13 +134,13 @@
 
     .footer-link {
         margin-top: 20px;
-        
+
         a {
             color: #2b4582;
             font-size: 0.95rem;
             font-weight: 600;
             text-decoration: none;
-            
+
             &:hover {
                 text-decoration: underline;
             }
@@ -137,7 +151,7 @@
 @media (max-width: 768px) {
     .products-section {
         padding: 50px 15px;
-        
+
         .headers h2 {
             font-size: 2rem;
         }
