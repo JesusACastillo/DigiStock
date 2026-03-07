@@ -15,6 +15,10 @@
   margin-left: auto;
 }
 
+.mobile-nav {
+  display: none;
+}
+
 .nav-link {
   text-decoration: none;
   color: #23468C;
@@ -37,4 +41,36 @@
   width: 133px;
   height: 120px;
   object-fit: contain;
+}
+
+@media (max-width: 900px) {
+  .header {
+    padding: 0.5rem 2rem;
+  }
+  
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+    margin-left: auto;
+  }
+
+  .menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0.5rem 1rem;
+    height: 70px;
+  }
+  .logo {
+    width: 90px;
+    height: 80px;
+  }
 }

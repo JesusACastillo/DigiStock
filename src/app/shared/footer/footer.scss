@@ -105,3 +105,24 @@
         margin: 0;
     }
 }
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .contact-item {
+        justify-content: center;
+    }
+
+    .footer-logo {
+        margin: 0 auto;
+        display: block;
+    }
+}

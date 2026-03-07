@@ -1,0 +1,117 @@
+.values-section {
+    background-color: #fafbfc;
+    padding: 80px 20px;
+    min-height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+
+    .headers {
+        text-align: center;
+        margin-bottom: 50px;
+
+        h2 {
+            color: #2b4582;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .divider {
+            width: 80px;
+            height: 3px;
+            background-color: #2b4582;
+            margin: 0 auto 15px auto;
+            border: none;
+        }
+
+        p {
+            color: #8c92a6;
+            font-size: 1.1rem;
+            margin: 0;
+            font-weight: 400;
+        }
+    }
+
+    .cards {
+        display: flex;
+        gap: 20px;
+        max-width: 1250px;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 40px 20px;
+            flex: 1;
+            min-width: 200px;
+            max-width: 280px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            }
+
+            .icon-container {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                background-color: #eef2fa;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+
+            h3 {
+                color: #2b4582;
+                font-size: 1.4rem;
+                font-weight: 600;
+                margin-bottom: 15px;
+                margin-top: 0;
+            }
+
+            p {
+                color: #4a5063;
+                line-height: 1.5;
+                font-size: 0.95rem;
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .values-section {
+        padding: 50px 15px;
+        
+        .cards {
+            gap: 20px;
+            .card {
+                min-width: 45%;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .values-section {
+        .headers h2 {
+            font-size: 2rem;
+        }
+
+        .cards .card {
+            min-width: 100%;
+        }
+    }
+}

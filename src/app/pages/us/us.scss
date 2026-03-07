@@ -6,7 +6,7 @@
     padding: 2rem 4rem;
     gap: 1rem;
     text-align: center;
-    height: 630px;
+    min-height: calc(100vh - 90px);
     background-color: white;
 }
 
@@ -54,5 +54,26 @@ span {
         height: auto;
         border-radius: 8px;
         object-fit: cover;
+    }
+}
+
+@media (max-width: 900px) {
+    .us {
+        padding: 2rem;
+    }
+
+    .separate {
+        flex-direction: column;
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .us-description {
+        text-align: center;
+    }
+
+    .us-image {
+        justify-content: center;
+        width: 100%;
     }
 }
