@@ -17,13 +17,31 @@
         <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu" class="menu-button">
             <mat-icon style="color: #23468C; font-size: 30px; width: 30px; height: 30px;">menu</mat-icon>
         </button>
-        <mat-menu #menu="matMenu" class="custom-mobile-menu">
-            <a mat-menu-item href="#inicio">Inicio</a>
-            <a mat-menu-item href="#nosotros">Nosotros</a>
-            <a mat-menu-item href="#mision">Misión & Visión</a>
-            <a mat-menu-item href="#valores">Valores</a>
-            <a mat-menu-item href="#productos">Productos</a>
-            <a mat-menu-item href="#contacto">Contacto</a>
+        <mat-menu #menu="matMenu" class="custom-mobile-menu" backdropClass="custom-menu-backdrop">
+            <a mat-menu-item href="#inicio">
+                <mat-icon>home</mat-icon>
+                <span>Inicio</span>
+            </a>
+            <a mat-menu-item href="#nosotros">
+                <mat-icon>info</mat-icon>
+                <span>Nosotros</span>
+            </a>
+            <a mat-menu-item href="#mision">
+                <mat-icon>track_changes</mat-icon>
+                <span>Misión & Visión</span>
+            </a>
+            <a mat-menu-item href="#valores">
+                <mat-icon>emoji_objects</mat-icon>
+                <span>Valores</span>
+            </a>
+            <a mat-menu-item href="#productos">
+                <mat-icon>inventory_2</mat-icon>
+                <span>Productos</span>
+            </a>
+            <a mat-menu-item href="#contacto">
+                <mat-icon>mail</mat-icon>
+                <span>Contacto</span>
+            </a>
         </mat-menu>
     </div>
 </mat-toolbar>

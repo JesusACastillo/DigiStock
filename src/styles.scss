@@ -65,3 +65,51 @@ app-footer {
   display: block;
   scroll-margin-top: 100px;
 }
+
+/* Premium Hamburger Menu Styling */
+.custom-mobile-menu {
+  border-radius: 16px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2) !important;
+  padding: 10px 0 !important;
+  min-width: 250px !important;
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.4);
+
+  .mat-mdc-menu-item {
+    min-height: 55px !important;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0 24px !important;
+    transition: all 0.3s ease !important;
+    
+    .mat-icon {
+      color: #2b4582;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .mdc-list-item__primary-text {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #333;
+    }
+
+    &:hover, &:focus {
+      background-color: #e8f0fb !important;
+      
+      .mat-icon {
+        color: #3b82f6;
+        transform: scale(1.1);
+      }
+      .mdc-list-item__primary-text {
+        color: #2b4582;
+      }
+    }
+  }
+}
+
+.custom-menu-backdrop {
+  background-color: rgba(35, 70, 140, 0.4) !important;
+  backdrop-filter: blur(4px);
+}

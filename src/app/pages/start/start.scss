@@ -7,6 +7,7 @@
   height: 100vh;
   padding: 2rem;
   gap: 1rem;
+  background-image: url('../../../../public/images/photo.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -39,7 +40,7 @@
   z-index: 1;
 }
 
-.start-page>* {
+.start-page > * {
   position: relative;
   z-index: 2;
 }
@@ -75,7 +76,7 @@ section {
 ::ng-deep .start-page {
   a[matButton="outlined"] {
     border-width: 5px;
-    border-color: white;
+    border-color: rgb(255, 255, 255);
   }
 }
 
